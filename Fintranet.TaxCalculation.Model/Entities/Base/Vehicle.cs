@@ -12,5 +12,6 @@ public class Vehicle : BaseEntity
         Name = name;
         VehicleTypeId = vehicleTypeId;
     }
-    public static Vehicle Create(string? name, Guid? vehicleTypeId) {  return new Vehicle(name, vehicleTypeId);}
+   
+    public static Vehicle Create(string? name, Guid? vehicleTypeId = null) {  return new Vehicle(name, vehicleTypeId);}
 }

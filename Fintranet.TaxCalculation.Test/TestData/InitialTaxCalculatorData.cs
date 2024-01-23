@@ -14,6 +14,8 @@ namespace Fintranet.TaxCalculation.Test.TestData
         public static Guid VehicleId => Guid.Parse("aad1c289-2128-47cf-9bf9-4db5b8c33bdf");
         public static Guid FreeTaxVehicle => Guid.Parse("aad1c289-2128-47cf-9bf9-4db5b8c33bdf");
         public static Vehicle Vehicle => Vehicle.Create("bmw-i8", FreeTaxVehicle);
+        public static Vehicle VehicleWithoutRelation => Vehicle.Create("azera");
+        public static Vehicle SecondVehicleWithoutRelation => Vehicle.Create("peugeot2008");
         public static IEnumerable<VehicleTaxDate> VehicleTaxDates => new List<VehicleTaxDate>(2) { VehicleTaxDate.Create(VehicleId, DateTime.Parse("2024-02-16 15:00:00")), VehicleTaxDate.Create(VehicleId, DateTime.Parse("2024-01-16 15:00:00")) };
         public static InitialSetting FreeTaxInitialSetting => InitialSetting.Create(true, Enumerable.Empty<DateTime>(), Enumerable.Empty<Month>(), new List<Guid>() { FreeTaxVehicle },
             Enumerable.Empty<TaxPrice>(), CityId);
